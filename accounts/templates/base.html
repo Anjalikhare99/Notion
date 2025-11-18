@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Brand</title>
+    {#Bootstrap CSS#}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    {#Bootstrap Icons#}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    {#Custom CSS#}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="{% static 'image/Logo.png' %}" alt="img" />
+        </div>
+    
+        <div class="main">
+            <a href="">Home</a>
+            <div class="dropdown">
+                <a class="btn" id="catalogDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Catalog
+                </a>
+                <div class="dropdown-menu" aria-labelledby="catalogDropdown">
+                    <a class="dropdown-item" href="#">Category 1</a>
+                    <a class="dropdown-item" href="#">Category 2</a>
+                    <a class="dropdown-item" href="#">Category 3</a>
+                </div>
+            </div>
+            <a href="">About</a>
+            <a href="">Contact us</a>
+        </div>
+    
+        <div class="login">
+            <div>
+                <i class="bi bi-search"></i>
+            </div>
+    
+            <div>
+                <i class="bi bi-cart3"></i>
+            </div>
+    
+            <div>
+                <img src="{% static 'image/607be77a7f67a4e701fea2d579b0b0c8.png' %}" alt="img" />
+            </div>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+
+    {#jQuery (necessary for Bootstrap's JavaScript plugins)#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    {#Popper.js, required for Bootstrap tooltips, popovers, and more#}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldZRnOxgF+pbqyg2uaP2jFZ6r6C9ABP7mUcbx6B" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdownToggle = document.getElementById('catalogDropdown');
+            var dropdownMenu = document.querySelector('.dropdown-menu');
+
+            dropdownToggle.addEventListener('click', function() {
+                dropdownMenu.classList.toggle('show');
+            });
+
+            document.addEventListener('click', function(event) {
+                var isClickInside = dropdownToggle.contains(event.target);
+
+                if (!isClickInside) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

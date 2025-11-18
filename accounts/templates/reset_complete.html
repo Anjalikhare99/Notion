@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="forgot-password">
+    <div class="center">
+        <h4>Reset complete!</h4>
+        <p>All done! We have sent an email to m***********@gmail.com to confirm</p>
+        <div class="reset-button">
+            <div>
+                <a href="{% url 'login' %}" class=" form-control create-btn">Return to Login</a>
+            </div>
+            <div class="reset">
+                <a class="back-login" href="{% url 'login' %}">
+                    <i class="bi bi-arrow-left"></i>
+                 Back to Login</a>
+            </div>
+           
+        </div>
+    </div>
+</div>
+{% endblock %}

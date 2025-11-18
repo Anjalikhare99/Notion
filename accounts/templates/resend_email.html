@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="forgot-password">
+    <div class="center">
+        <h4>Check email</h4>
+        <p>We have sent the reset email to
+            youremailaccount@gmail.com</p>
+
+        {% if message %}
+        <div class="message">{{ message }}</div>
+        {% endif %}
+
+        <form method="POST" action="{% url 'resend_email' %}">
+            {% csrf_token %}
+
+            <div class="reset-button">
+                <div>
+                    <button type="submit" class=" form-control create-btn">Resend Email</button>
+                </div>
+                <div class="reset">
+                    <a class="back-login" href="{% url 'login' %}">
+                        <i class="bi bi-arrow-left"></i>
+                        Back to Login</a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

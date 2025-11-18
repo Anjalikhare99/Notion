@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="signup-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="left-section">
+                    <div class="heading">
+                        <h2 class="Join">
+                            Welcome Back
+                        </h2>
+                        <p>
+                            Build skills for today, tomorrow, and beyond.
+                            <span>Education to future-proof your career.</span>
+                        </p>
+                    </div>
+                    <div class="part2">
+                        <div class="student">
+                            Student</div>
+                        <div class="instructors">
+                            instructors</div>
+                    </div>
+                    <form action="{% url 'login' %}" method="post">
+                        {% csrf_token %}
+                        {% if message %}
+                        <div class="message">{{ message }}</div>
+                        {% endif %}
+
+                        <div>
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" class="form-control form_input border-0">
+                        </div>
+
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="form-control form_input border-0">
+                        </div>
+                        
+                        <div class="forgot_password">
+                            <a href="{% url 'forgot_password' %}">Forgot password</a>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="form-control create-btn">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="right-section">
+                    <img src="{% static 'image/login.png'%}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

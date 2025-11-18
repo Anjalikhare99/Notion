@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{# Section1 #}
+<div class="main-container">
+    <div class="hero-container">
+        <div class="hero-section">
+            <div class="call-to-action">
+                <a href="#">Become an Instructor
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hero-content">
+                <h2 class="hero-title">Empower Your Future with
+                    <span>Coding Skills</span>
+                </h2>
+                <p class="hero-text">With our online coding courses, you can learn at your own pace, from anywhere in
+                    the
+                    world, and get access to a wealth of resources, including hands-on projects, quizzes, and
+                    personalized
+                    feedback from instructors. </p>
+            </div>
+            <div class="hero-buttons">
+                <a class="learn-more-btn">Learn More</a>
+                <a class="book-demo-btn">Book a Demo</a>
+            </div>
+            <div class="hero-video">
+                <video class="video-fluid" controls autoplay>
+                    <source src="{%static 'video/-08c9-4ddd-9136-d02bc5635a53.mp4'%}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="features-section">
+            <div class="feature">
+                <h3 class="feature-title">Unlock your <span class="highlight">coding potential</span> with our online
+                    courses.</h3>
+                <p class="feature-text">Our courses are designed and taught by industry experts who have years of
+                    experience
+                    in coding and are passionate about sharing their knowledge with you.</p>
+                <div class="feature-buttons">
+                    <a class="learn-more-btn">Try it Yourself -></a>
+                    <a class="book-demo-btn">Learn More</a>
+                </div>
+            </div>
+            <div class="feature-image">
+                <img src="{%static 'image/Frame 37.png' %}" alt="image">
+            </div>
+
+            <div class="feature-image">
+                <img src="{%static 'image/Frame 38.png' %}" alt="image">
+            </div>
+            <div class="feature">
+                <h3 class="feature-title">Start <span class="highlight">coding in seconds</span></h3>
+                <p class="feature-text">Go ahead, give it a try. Our hands-on learning environment means you'll be
+                    writing
+                    real code from your very first lesson.</p>
+                <div class="feature-buttons">
+                    <a class="learn-more-btn">Continue Lesson -></a>
+                    <a class="book-demo-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="call-to-action-section">
+            <div class="call-to-action-content">
+                <h2 class="call-to-action-title">Unlock the <span class="highlight"> Power of Code</span></h2>
+                <p class="call-to-action-text">Learn to Build Anything You Can Imagine</p>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h5>Learn HTML</h5>
+                        <p>This course covers the basic concepts of HTML including creating and structuring web pages,
+                            adding text, links, images, and more.</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="card-details">
+                        <p>Beginner</p>
+                        <p>6 Lessons</p>
+                    </div>
+                </div>
+                <div class="card-1">
+                    <div class="card-content">
+                        <h5>Learn CSS</h5>
+                        <p>This course covers styling web pages using CSS, including layout techniques, color,
+                            typography,
+                            and animations.</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="card-details">
+                        <p>Beginner</p>
+                        <p>6 Lessons</p>
+                    </div>
+                </div>
+                <div class="card-1">
+                    <div class="card-content">
+                        <h5>Responsive Web design</h5>
+                        <p>This course teaches responsive web design techniques, allowing web pages to adapt to
+                            different
+                            devices and screen sizes</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="card-details">
+                        <p>Beginner</p>
+                        <p>6 Lessons</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="{% static 'image/frame 60.png' %}" alt="image">
+        <div class="button-container">
+            <a class="learn-more-btn">Explore Full Catalog -></a>
+            <a class="book-demo-btn">Learn More</a>
+        </div>
+    </div>
+    <div class="skills-container">
+        <div class="skills-header">
+            <h1>Get the skills you need for a <span class="highlight">job that is in demand.</span></h1>
+        </div>
+        <div class="skills-description">
+            <p>The modern StudyNotion dictates its own terms. Today, to be a competitive specialist requires more than professional skills.</p>
+            <a class="learn-more-btn">Learn More</a>
+        </div>
+    </div>
+    <div class="media-section">
+        <div class="image-wrapper"> 
+            <img src="{% static 'image/frame 49.png' %}" alt="Descriptive Alt Text"> 
+        </div>
+        <div class="video-wrapper">
+            <video class="video-player" controls autoplay>
+                <source src="{% static 'video/-bdf1-4f6e-a80a-8169a052b04a.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+{% endblock %}

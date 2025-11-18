@@ -1,0 +1,17 @@
+*.pyc
+*~
+_pycache_
+.DS_Store
+*.DS_Store
+*migrations/
+*.sqlite3
+debug-error.log
+home/google/credentials.json
+*media/
+nohup.out
+.vscode/
+db.json
+credentials.json
+.env
+venv
+*parkingvenv
